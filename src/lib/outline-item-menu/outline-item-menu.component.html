@@ -1,0 +1,96 @@
+<button
+  mat-icon-button
+  [matMenuTriggerFor]="menu"
+  (click)="onMenuTriggerClick($event)"
+  aria-label="Example icon-button with a menu"
+>
+  <mat-icon>more_vert</mat-icon>
+</button>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="editItem($event)">
+    <mat-icon>edit</mat-icon>
+    <span>Edit</span>
+  </button>
+
+  <mat-divider></mat-divider>
+
+  <button mat-menu-item (click)="addNewItem()">
+    <mat-icon>add</mat-icon>
+    <span>Add sub-circle</span>
+  </button>
+
+  <mat-divider></mat-divider>
+
+  <!-- <button mat-menu-item disabled>
+    <mat-icon>expand</mat-icon>
+    <span>Expand sub-circles</span>
+  </button>
+
+  <button mat-menu-item disabled>
+    <mat-icon>collapse</mat-icon>
+    <span>Collapse sub-circles</span>
+  </button> -->
+
+  <mat-divider></mat-divider>
+
+  <button mat-menu-item (click)="deleteItem()">
+    <mat-icon>delete</mat-icon>
+    <span>Delete</span>
+  </button>
+</mat-menu>
+
+<!-- <mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="focusOnNotebit()">
+    <mat-icon>arrow_forward</mat-icon>
+    <span>Focus</span>
+  </button>
+
+  <mat-divider></mat-divider>
+
+  <button mat-menu-item (click)="editNotebit()">
+    <mat-icon>edit</mat-icon>
+    <span>Edit</span>
+  </button>
+
+  <mat-divider></mat-divider>
+
+  <button mat-menu-item (click)="addNewItem()">
+    <mat-icon>add</mat-icon>
+    <span>Add child note</span>
+  </button>
+
+  <button mat-menu-item disabled>
+    <mat-icon>add</mat-icon>
+    <span>Add sibling note below</span>
+  </button>
+
+  <button mat-menu-item disabled>
+    <mat-icon>add</mat-icon>
+    <span>Add sibling note above</span>
+  </button>
+
+  <button mat-menu-item disabled>
+    <mat-icon>add</mat-icon>
+    <span>Add parent note</span>
+  </button>
+
+  <mat-divider></mat-divider>
+
+  <button mat-menu-item disabled>
+    <mat-icon>format_indent_increase</mat-icon>
+    <span>Indent</span>
+  </button>
+
+  <button mat-menu-item disabled>
+    <mat-icon>format_indent_decrease</mat-icon>
+    <span>Outdent</span>
+  </button>
+
+  <mat-divider></mat-divider>
+
+  <button mat-menu-item disabled>
+    <mat-icon>delete</mat-icon>
+    <span>Delete</span>
+  </button>
+</mat-menu> -->

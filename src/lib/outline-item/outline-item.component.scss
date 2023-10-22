@@ -1,0 +1,79 @@
+// Selection color as a fraction of maptio-accent
+// $maptio-accent: #48a3a3;
+$selection-color: #aadada;
+$selection-color-hover: #86cbcb;
+
+// Based, to an extent, on Angular Material
+$hover-color: rgba(0, 0, 0, 0.04);
+
+// $editor-color: #ececec;
+$editor-color: #e7e7e7;
+
+$border-radius: 1.5rem;
+
+:host {
+  width: 100%;
+}
+
+.notebit {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  border-radius: $border-radius;
+  word-wrap: break-word;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+
+  &.selected {
+    background-color: $selection-color;
+  }
+
+  &.selected:hover {
+    background-color: $selection-color-hover;
+  }
+}
+
+.menu {
+  margin-left: auto;
+  opacity: 0;
+}
+
+.tree-toggle {
+  margin-right: 0.25rem;
+  opacity: 0.2;
+}
+
+.notebit:hover {
+  .tree-toggle {
+    opacity: 0.5;
+  }
+
+  .tree-toggle:hover {
+    opacity: 1;
+  }
+
+  .menu {
+    display: block;
+    opacity: 0.5;
+  }
+
+  .menu:hover {
+    opacity: 1;
+  }
+}
+
+.notebit .editor {
+  margin: 0 -3rem 0 -3.25rem;
+  padding: 0.875rem 3rem 0.875rem 3.25rem;
+  width: 100%;
+  border: none;
+  border-radius: $border-radius;
+  outline-style: none;
+  background-color: $editor-color !important;
+  // outline-style: solid;
+  // outline-width: 0.125rem;
+  // outline-color: $selection-color;
+}

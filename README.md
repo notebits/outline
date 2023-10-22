@@ -1,2 +1,7 @@
 # outline
-An outline library based on the tree component from Angular Material.
+
+This library was generated with [Nx](https://nx.dev).
+
+## Running unit tests
+
+Run `nx test outline` to execute the unit tests.
